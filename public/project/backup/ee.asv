@@ -1,0 +1,15 @@
+num=[1,2,3,4 ,5,6,7,8,9];
+perfor=[];
+perfor_dct=[];
+for l=1:length(num),
+    perfor=[perfor PCA_Face_Recognition(num(l))];
+    perfor_dct=[perfor_dct dct_eculid(num(l))];
+end
+plot(num*10,perfor);
+xlabel('% of images used for training');
+ylabel('recognition rate');
+
+plot(num*10,perfor_dct);
+
+
+
